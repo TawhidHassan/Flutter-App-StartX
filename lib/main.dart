@@ -21,27 +21,20 @@ class myapp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Text("hi i am sifat kuddus ali",
-          style: new TextStyle(
-            color: Colors.red,
-            fontSize: 22.9,
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.bold,
-//            background: Paint()..color=Colors.black..style=PaintingStyle.stroke,
-//            backgroundColor: Colors.amber,
-//            letterSpacing: 10.0,
-//            wordSpacing: 10.0,
-            decoration: TextDecoration.underline,
-            decorationColor: Colors.black,
-            decorationStyle: TextDecorationStyle.dashed,
-            fontFamily: "Times New Roman",
+          child:FlatButton(
+            onPressed: (){},
+            child: Text(
+              "button",
+              style: TextStyle(
+                fontSize: 33.0
+              ),
+            ),
+            textColor: Colors.red,
+            color: Colors.amberAccent,
+            splashColor: Colors.black,//bouble effect
+            padding: EdgeInsets.all(20.0),
+            highlightColor: Colors.green, //click to show effect color
 
-          ),
-            textAlign: TextAlign.center,
-            textDirection: TextDirection.ltr,
-            softWrap: true,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 2,
           ),
         ),
       ),
