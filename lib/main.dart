@@ -22,22 +22,14 @@ class myapp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child:MaterialButton(
+          child:IconButton(
             onPressed: (){},
-            child: Text("sifat",
-            style: TextStyle(
-              fontSize: 20.0,
+            icon: Icon(
+              Icons.add_a_photo,
             ),
-            ),
-            color: Colors.green,
-            textColor: Colors.white,
-            height: 40.0,
-            minWidth: 200.0,
-              //shape: RoundedRectangleBorder(
-//              borderRadius: BorderRadius.circular(50.0)
-//            )
-//            shape: StadiumBorder()
-          shape: OutlineInputBorder(),
+            iconSize: 50.0,
+            splashColor: Colors.red,
+            tooltip: "add a Photo",
           ),
         ),
       ),
