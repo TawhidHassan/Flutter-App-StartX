@@ -22,20 +22,22 @@ class myapp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child:RaisedButton(
+          child:MaterialButton(
             onPressed: (){},
             child: Text("sifat",
             style: TextStyle(
               fontSize: 20.0,
             ),
             ),
-            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 5.0),
+            color: Colors.green,
             textColor: Colors.white,
-            color: Colors.green[400],
-            splashColor: Colors.amberAccent,
-            elevation: 28.0,//extara property from flate button
-            highlightElevation: 10.0,
-            shape: Border.all(width: 2.0,color: Colors.black),
+            height: 40.0,
+            minWidth: 200.0,
+              //shape: RoundedRectangleBorder(
+//              borderRadius: BorderRadius.circular(50.0)
+//            )
+//            shape: StadiumBorder()
+          shape: OutlineInputBorder(),
           ),
         ),
       ),
