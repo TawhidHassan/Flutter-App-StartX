@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,20 +22,20 @@ class myapp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child:FlatButton(
+          child:RaisedButton(
             onPressed: (){},
-            child: Text(
-              "button",
-              style: TextStyle(
-                fontSize: 33.0
-              ),
+            child: Text("sifat",
+            style: TextStyle(
+              fontSize: 20.0,
             ),
-            textColor: Colors.red,
-            color: Colors.amberAccent,
-            splashColor: Colors.black,//bouble effect
-            padding: EdgeInsets.all(20.0),
-            highlightColor: Colors.green, //click to show effect color
-
+            ),
+            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 5.0),
+            textColor: Colors.white,
+            color: Colors.green[400],
+            splashColor: Colors.amberAccent,
+            elevation: 28.0,//extara property from flate button
+            highlightElevation: 10.0,
+            shape: Border.all(width: 2.0,color: Colors.black),
           ),
         ),
       ),
