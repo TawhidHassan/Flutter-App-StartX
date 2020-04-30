@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -5,73 +6,74 @@ void main() {
   runApp(myapp());
 }
 
-class myapp extends StatelessWidget {
+class myapp extends StatefulWidget {
+  @override
+  _myappState createState() => _myappState();
+}
+
+class _myappState extends State<myapp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "my app",
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.cyan,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("my app",
-            style: new TextStyle(
-              fontSize: 30.0,
+      title: "Statefull",
+      home: homepage(),
+    );
+  }
+}
+
+class homepage extends StatefulWidget {
+  @override
+  _homepageState createState() => _homepageState();
+}
+
+class _homepageState extends State<homepage> {
+  int dataChangevar=0;
+
+  void dataChange()
+  {
+    setState(() {
+      dataChangevar+=1;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("AppBar",
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text("$dataChangevar",
+              style:TextStyle(
+                color: Colors.red,
+                fontSize: 50.0,
+                backgroundColor: Colors.green
+              ),
+              ),
             ),
-          ),
-        ),
-        body:
-        Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text("this i a a text widget",
-                style: TextStyle(
-                    fontSize: 24.0
-                ),
-              ),Text("this i a a text widget 2",
-              ),Text("this i a a text widget 2",
-                style: TextStyle(
-                    fontSize: 24.0
-                ),
+            MaterialButton(
+                onPressed: dataChange,
+              child: Text("click me",
+              style: TextStyle(
+                fontSize: 20.0,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  RaisedButton(
-                    onPressed: (){},
-                    child: Text("button",
-                      style: TextStyle(
-                        fontSize: 24.0,
-                      ),
-                    ),
-                  ),
-                  RaisedButton(
-                    onPressed: (){},
-                    child: Text("button2",
-                      style: TextStyle(
-                        fontSize: 24.0,
-                      ),
-                    ),
-                  ),RaisedButton(
-                    onPressed: (){},
-                    child: Text("button3",
-                      style: TextStyle(
-                        fontSize: 24.0,
-                      ),
-                    ),
-                  ),
-                ],
               ),
-
-            ],
-          ),
+            )
+          ],
         ),
-
       ),
     );
   }
 }
+
+
+
